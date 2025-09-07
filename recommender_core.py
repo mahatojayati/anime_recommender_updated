@@ -2,10 +2,10 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-def get_recommendations(title: str, top_n: int = 10):
-    # Load the dataset
-    df = pd.read_csv("anime.csv")
-    df.fillna("", inplace=True)
+def recommend_anime(title):
+    # Replace with your real recommendation logic
+    return ["Attack on Titan", "Demon Slayer", "Jujutsu Kaisen"]
+
 
     # Combine relevant fields for better context
     text_data = (df["name"] + " " + df["genre"] + " " + df["type"]).astype(str)
